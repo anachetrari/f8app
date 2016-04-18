@@ -99,24 +99,3 @@ var styles = StyleSheet.create({
   },
 });
 
-module.exports = Header;
-module.exports.__cards__ = (define) => {
-  const MOCK_SESSION = {
-    title: 'Building For the Next Billion',
-    speakers: [
-      { id: 1, pic: 'https://graph.facebook.com/100001244322535/picture?width=60&height=60' },
-      { id: 2, pic: 'https://graph.facebook.com/10152531777042364/picture?width=60&height=60' },
-    ],
-  };
-
-  define('Example', (state = null, update) => (
-    <Header session={MOCK_SESSION} />
-  ));
-
-  define('Long title', () => (
-    <Header session={{
-      title: 'Inside Facebook\'s Infrastructure (Part 1): The System that Serves Billions',
-      speakers: [],
-    }} />
-  ));
-};
